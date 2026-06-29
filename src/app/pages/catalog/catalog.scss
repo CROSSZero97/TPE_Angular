@@ -1,0 +1,29 @@
+.catalog-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background-color: #121214;
+  min-height: calc(100vh - 70px);
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  
+  .left-content {
+    flex: 3;
+  }
+  
+  .right-content {
+    flex: 1;
+    background-color: #1a1a1e;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    height: fit-content;
+    border: 1px solid #29292e;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-container {
+    flex-direction: column;
+  }
+}

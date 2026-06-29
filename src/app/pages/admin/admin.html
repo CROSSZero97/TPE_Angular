@@ -1,0 +1,29 @@
+<div class="admin-container">
+  
+  <div class="admin-form-section">
+    @if (successMessage) {
+      <div class="alert-success">¡Operación realizada con éxito!</div>
+    }
+    
+    <app-movie-form 
+      [movieToEdit]="peliculaSeleccionada"
+      (onSave)="guardarPelicula($event)"
+      (onCancel)="cancelarEdicion()">
+    </app-movie-form>
+  </div>
+
+  <div class="admin-list-section">
+    <h2>⚙️ Inventario de Películas</h2>
+    <div class="table-scroll">
+      
+      <app-movie-list 
+        [movies]="movies" 
+        mode="admin"
+        (onEdit)="seleccionarPelicula($event)"
+        (onDelete)="borrarPelicula($event)">
+      </app-movie-list>
+      
+    </div>
+  </div>
+
+</div>

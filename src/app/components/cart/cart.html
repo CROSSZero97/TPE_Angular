@@ -1,0 +1,21 @@
+<h3>🛒 Carrito de Alquiler</h3>
+
+@if (cartItems.length === 0) {
+  <p style="color: #a8a8b3;">El carrito está vacío.</p>
+} @else {
+  @for (item of cartItems; track item.movie.id) {
+    <div class="cart-item">
+      <h4>{{ item.movie.name }}</h4>
+      <p>Días: {{ item.days }} x ${{ item.movie.price }}</p>
+      <p>Subtotal: <strong style="color: #04d361;">${{ item.movie.price * item.days }}</strong></p>
+      <button class="btn-remove" (click)="remove(item.movie.id!)">Quitar</button>
+      <hr class="cart-divider">
+    </div>
+  }
+  
+  <div class="total-section">
+    <span>Total a pagar:</span>
+    <span style="color: #04d361;">${{ total }}</span>
+  </div>
+  <button class="btn-checkout" (click)="checkout()">Confirmar Alquiler</button>
+}
