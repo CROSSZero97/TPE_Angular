@@ -75,14 +75,14 @@ export class AdminComponent implements OnInit {
     // Cuadro de confirmación nativo del navegador por seguridad
     if (confirm('¿Estás seguro de que deseas eliminar esta película permanentemente?')) {
       // Elimino la pelicula 
-      this.cinemaService.deleteMovie
+      this.cinemaService.deleteMovie(id).subscribe(() => {
       // Se recarga la lista 
-      this.loadMovies();
-      // Comprobamos si la pelicula que estamos editando es la misma que acabamos de borrar...
-      if (this.peliculaSeleccionada && this.peliculaSeleccionada.id === id) {
-          this.cancelarEdicion(); // ... si lo es limpiamos el formulario y lo volvemos a "Modo Creación"
-
-      };
+        this.loadMovies();
+        // Comprobamos si la pelicula que estamos editando es la misma que acabamos de borrar...
+        if (this.peliculaSeleccionada && this.peliculaSeleccionada.id === id) {
+            this.cancelarEdicion(); // ... si lo es limpiamos el formulario y lo volvemos a "Modo Creación"
+        }
+      });
     }
   }
 
