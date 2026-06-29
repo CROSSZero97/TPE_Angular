@@ -74,6 +74,8 @@ export class AdminComponent implements OnInit {
   borrarPelicula(id: string) {
     // Cuadro de confirmación nativo del navegador por seguridad
     if (confirm('¿Estás seguro de que deseas eliminar esta película permanentemente?')) {
+      // Elimino la pelicula 
+      this.cinemaService.deleteMovie
       // Se recarga la lista 
       this.loadMovies();
       // Comprobamos si la pelicula que estamos editando es la misma que acabamos de borrar...
