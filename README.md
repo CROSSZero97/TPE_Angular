@@ -1,7 +1,7 @@
 # Cinemabuster
 
 # Datos:
-Facundo Agustin Figueroa Martin - DNI:44.118.603 - facu.agus.figueroa@gmail.com - Sede Tandil
+Nombre y Apellido: Facundo Agustin Figueroa Martin -DNI: 44.118.603 - Email: facu.agus.figueroa@gmail.com - Sede : Tandil
 
 # StackBlitz
 https://stackblitz.com/~/github.com/CROSSZero97/TPE_Angular
