@@ -1,4 +1,3 @@
-
 // Estructura de los datos de las películas.
 // Se define qué propiedades debe tener una película en la pagina y en MockAPI.
 

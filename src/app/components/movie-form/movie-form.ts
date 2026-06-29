@@ -61,7 +61,7 @@ export class MovieFormComponent implements OnChanges {
     }
   }
 
-  // Funcion simple para limpiar el formulario y cerrarlo
+  // Funcion simple para limpiar el formulario
   cancel() {
     this.movieForm.reset({ price: 1000, maxDays: 1, stock: 1 });
     this.onCancel.emit(); // Le avisa al Administrador que cerramos el panel de edición
